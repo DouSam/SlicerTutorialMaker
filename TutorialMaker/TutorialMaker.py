@@ -349,6 +349,7 @@ class TutorialMakerTest(ScriptedLoadableModuleTest):
                 # Paint Screenshots with annotations
                 #AnnotationPainter.ImageDrawer.StartPaint(os.path.dirname(slicer.util.modulePath("TutorialMaker")) + "/Outputs/Annotations/" + unit_tutorials + ".json")
             except Exception as e:
+                raise e
                 self.delayDisplay(_("Tutorial Execution Failed: {unit_tutorials} - {error}".format(unit_tutorials=unit_tutorials, error=e)))
                 tutorials_failed = tutorials_failed + 1
                 pass
